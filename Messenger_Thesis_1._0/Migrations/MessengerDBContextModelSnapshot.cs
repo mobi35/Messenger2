@@ -230,6 +230,8 @@ namespace Messenger_Thesis_1._0.Migrations
 
                     b.Property<int>("SOAToDeliver");
 
+                    b.Property<int>("TaskNumber");
+
                     b.Property<int>("TotalNumberOfLetters");
 
                     b.HasKey("UserID");

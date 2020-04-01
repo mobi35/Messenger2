@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Adrian Radores\\Desktop\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj": {}
+    "C:\\Users\\Adrian Radores\\Desktop\\fking\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Adrian Radores\\Desktop\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj": {
+    "C:\\Users\\Adrian Radores\\Desktop\\fking\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Adrian Radores\\Desktop\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj",
+        "projectUniqueName": "C:\\Users\\Adrian Radores\\Desktop\\fking\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj",
         "projectName": "Messenger_Thesis_1._0",
-        "projectPath": "C:\\Users\\Adrian Radores\\Desktop\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj",
+        "projectPath": "C:\\Users\\Adrian Radores\\Desktop\\fking\\messenger2\\Messenger_Thesis_1._0\\Messenger_Thesis_1._0.csproj",
         "packagesPath": "C:\\Users\\Adrian Radores\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Adrian Radores\\Desktop\\messenger2\\Messenger_Thesis_1._0\\obj\\",
+        "outputPath": "C:\\Users\\Adrian Radores\\Desktop\\fking\\messenger2\\Messenger_Thesis_1._0\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

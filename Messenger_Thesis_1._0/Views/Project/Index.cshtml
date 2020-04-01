@@ -118,14 +118,8 @@
                                                     <input type="text" readonly class="form-control" id="d_projectid" />
                                                     <br />
                                                     <label>Messengers</label>
-                                                    <select name="messenger" id="d_messenger" class="form-control">
-                                                        @{
-                                                            foreach (var m in UserRepository.GetAll().Where(a => a.Role == "Messenger").ToList())
-                                                            {
-                                                                <option value="@m.UserID">@m.FirstName @m.MiddleName  @m.LastName  </option>
-                                                            }
-                                                        }
-                                                    </select>
+                                                    
+                                                    <small>note: the system will automatically assign the messengers.</small>
 
                                                     <br />
                                                     <label>Quantity</label>

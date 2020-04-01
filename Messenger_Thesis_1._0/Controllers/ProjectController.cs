@@ -120,30 +120,15 @@ namespace Messenger_Thesis_1._0.Controllers
 
             //GET ALL MESSENGER
 
-            var getMessenger = projectRepo.GetAll().Where(a => a.Status == "On-going" && a.Messenger != 0).GroupBy(a => a.Messenger).Select(a => new
-            {
-                Customer = a.Key,
-                Count = a.Count(),
-                Messenger =  a.FirstOrDefault().Messenger
-            }).OrderByDescending(a => a.Count).ToList();
+            var getMessenger = userRepo.GetAll().Where(a => a.Role == "Messenger").OrderBy(a => a.TaskNumber).Select(a => a.UserID);
 
             List<User> userList = new List<User>();
 
             foreach (var getM in getMessenger)
             {
-                userList.Add(userRepo.FindUser(a => a.UserID == getM.Messenger));
+                userList.Add(userRepo.FindUser(a => a.UserID == getM));
             }
-            foreach (var user in userRepo.GetAll().Where(a => a.Role == "Messenger").ToList())
-            {
-                foreach (var mess in getMessenger)
-                {
-                    if (user.UserID != mess.Messenger)
-                        userList.Add(user);
-                }
-            }
-
-          
-
+         
 
             int count = 0;
             while(getArea.Count() > userList.Count())
@@ -163,6 +148,10 @@ namespace Messenger_Thesis_1._0.Controllers
                         letterRepo.Update(l);
                     }
                 }
+
+                var userModel = userList[messengerCount];
+                userModel.TaskNumber++;
+                userRepo.Update(userModel);
                 messengerCount++;
             }
 
@@ -323,7 +312,16 @@ namespace Messenger_Thesis_1._0.Controllers
                 projectRepo.Update(project);
             }
 
-           
+            var letterList = letterRepo.GetAll().Where(a => a.DeliveryID == id && a.MessengerID == userID).Select(a => a.MessengerID).ToList();
+
+            foreach (var l in letterList.Distinct().ToList())
+            {
+                var user = userRepo.FindUser(a => a.UserID == l);
+                user.TaskNumber--;
+                userRepo.Update(user);
+            }
+
+
             return "";
         }
 
